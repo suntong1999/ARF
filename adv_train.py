@@ -33,20 +33,13 @@ import generate_and_test_new
 
 from arf.Arf_MobileNetV1 import arf_mv1
 
-#model = arf_convnext_xt().cuda()
-#model_name = 'parc_convnext'
-model_name = 'resnet'
+model = arf_mv1.cuda()
 batch_size = 64
 use_cuda = True
 device = torch.device('cuda' if (use_cuda and torch.cuda.is_available()) else 'cpu')
-
-# 设置模型结构
-model = resnet.ResNet34().to(device)
-# model = wide_resnet.Wide_ResNet(28, 10, 0.3, 10).to(device)
-# model = wideresnet.WideResNet().to(device)
 # 设置模型路径
 #pretrained_target = "/home/public/st/adversarial_robustness_toolbox_main/examples/CIFAR10_256.pth"
-pretrained_target = "/home/public/st/adversarial_robustness_toolbox_main/models_test/150000_pgd_resnet_mix_gc_all_64_00005.pth"
+pretrained_target = "/home/public/st/adversarial_robustness_toolbox_main/models_test/arf_mv1_ori.pth"
 # pretrained_target = './model/cifar10_wide_resnet.pth'
 # pretrained_target = './model/model_cifar_wrn.pt'
 
