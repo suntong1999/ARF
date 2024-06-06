@@ -31,7 +31,7 @@ import resnet
 import generate_and_test
 import generate_and_test_new
 
-from arf.Arf_mv1 import arf_mv1
+from arf.Arf_MobileNetV1 import arf_mv1
 
 #model = arf_convnext_xt().cuda()
 #model_name = 'parc_convnext'
